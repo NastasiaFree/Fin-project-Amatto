@@ -1,0 +1,65 @@
+.card:hover .front {transform: none;}
+.kitchen {
+    /* margin: 0 auto; */
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.kitchen__block {
+    background-color: #F9F9F9;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    border-radius: 15px;
+}
+.kitchen__block-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.kitchen__block-title a {
+    font-weight: 700;
+}
+
+
+.kitchen__block-title h2:after {
+    display: block;
+    background-color: #FFCC29;
+    height: 5px;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 14px;  
+}
+.slideshow__wrapper {
+    max-width: 700px;
+}
+.prev,
+.next {
+    color: #FFCC29;
+    border: 2px solid #FFCC29;
+    border-radius: 30%;
+}
+
+/* .front:hover {
+    background: rgba(46, 49, 51, 0.048);
+} */
+.front {
+    position: relative;
+}
+.front img {
+    display: none;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    right: 5%;
+    bottom: 10%;
+}
+.front:hover img{
+    display: block;
+}
