@@ -11,7 +11,7 @@ let headerText = ` <div class="header ">
             <ul class="menu__list">
                 <li><a class="menu__link" href="index.html" target="_blanc">Главная</a></li>
                 <li><a class="menu__link" href="index.html#about" target="_blanc">О нас</a></li>
-                <li><a class="menu__link" href="">Каталог</a></li>
+                <li><a class="menu__link" href="catalog.html" target="_blanc">Каталог</a></li>
                 <li><a class="menu__link" href="index.html#payment" target="_blanc">Рассрочка</a></li>
                 <li><a class="menu__link" href="blog.html" target="_blanc">Блог</a></li>
                 <li><a class="menu__link" href="#footer">Контакты</a></li>
@@ -48,7 +48,7 @@ let footerText = `
             <ul class="menu-list footer__nav">
                 <li><a class="" href="index.html" target="_blanc" >Главная</a></li>
                 <li><a href="index.html#about" target="_blanc">О нас</a></li>
-                <li><a href="">Каталог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="index.html#payment" target="_blanc">Рассрочка</a></li>
                 <li><a href="blog.html" target="_blanc">Блог</a></li>
                 <li><a href="#footer">Контакты</a></li>
@@ -57,19 +57,19 @@ let footerText = `
     </div>
     <div class="footer__contacts">
         <details open>
-            <summary class="underline">Republic Of Moldova</summary>
+            <summary class="underline">Moldova</summary>
             <p class="location">Chisinau,15/2 Trandafirilor Str.</p>
             <p class="number_cont">+373 68 159 759</p>
             <p class="mail">hello@amatto.md</p>
         </details>
         <details open class="det">
-            <summary class="underline">Republic Of Belgium</summary>
+            <summary class="underline">Belgium</summary>
             <p class="location">Sint-Barbarastraat 3</p>
             <p class="number_cont">+32497037031</p>
             <p class="mail">hello@amatto.md</p>
         </details>
         <details open class="det" >
-            <summary class="underline">Republic Of Norway</summary>
+            <summary class="underline">Norway</summary>
             <p class="location">Sadnes skytebaneveien 8D</p>
             <p class="number_cont">+4793960237</p>
             <p class="mail">hello@amatto.md</p>
@@ -101,6 +101,21 @@ let adviceText = ` <div class="advice">
 </div>`;
 
 let popUpForm = `
+<div class="pop_up" id="pop_up">
+<div class="pop_up_container">
+    <div class="pop_up_body" id="pop_up_body">
+        <p>Оставьте свои данные и мы с вами свяжемся в скором времени:</p>
+        <form class="popForm" action="">
+            <input class="popi" type="text" name="name" id="popName" placeholder="Имя" required onkeyup="validation()">
+            <input class="popi"  type="text" name="tel" id="popTel" placeholder="Телефон" required onkeydown="validation()">
+            <button id="but_pop">Оставить заявку</button>
+            <p class="valid" id="popTelValid"></p>
+            <p class="valid" id="popNameValid"></p>
+        </form>
+        <div class="pop_up_close" id="pop_up_close">&#10006</div>
+    </div>
+</div>
+</div>
 <div class="pop_upFin" id="pop_upFin">
 <div class="pop_upFin_container">
     <div class="pop_upFin_body" >
