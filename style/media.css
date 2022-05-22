@@ -37,8 +37,8 @@
     }
     .payment__form p {
         font-weight: 700;
-        color: #000000;
-        font-size: 18px;
+         color: #000000;
+        /*font-size: 18px; */
         text-decoration: underline;
     }
     .payment__calc-total {
@@ -243,7 +243,7 @@
         padding: 0 10px;
     }
     #total {
-        width: 100px;
+        width: 130px;
     }
     .payment__form *{
         display: flex;
@@ -283,7 +283,7 @@
     .footer__nav {
         display: flex;
         gap: 10px;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
     .footer__logo {
@@ -338,10 +338,21 @@
     }
     .make__item {
         width: 300px;
-        height: 250px;
+        height: 280px;
+    }
+    .back__price p {
+    
+        padding: 5px 5px;
+        
+    }
+    .back__cont {
+        padding: 10px;
     }
     .order__time {
         width: 300px;
+    }
+    .pop_upFin_body h2 {
+        font-size: 45px;
     }
     
 }
@@ -360,8 +371,15 @@ h6 {
     .advice__note input {
         width: 280px;
 }
+.designed {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .pop_but {
-    padding: 10px;
+    padding:  10px 5px;
 }
 .order__info h6 {
     padding: 10px;

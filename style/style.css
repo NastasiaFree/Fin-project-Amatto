@@ -33,6 +33,7 @@ input:focus {
 }
 html,
 body {
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     height: 100%;
     line-height: 20px;
@@ -85,7 +86,7 @@ h5 {
     font-weight: 600;
 }
 h6 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
 }
@@ -141,7 +142,7 @@ h6 {
 .menu__link {
     position: relative;
     font-size: 18px;
-    font-weight: 560;
+    font-weight: 500;
     /* озможно переделать???????????????? */
 }
 .menu__link:hover{
@@ -850,6 +851,9 @@ p.valid  {
     padding: 70px 0;
     height: 100%;
 }
+.advice__info h6 {
+    margin-bottom: 15px;
+}
 .advice__note {
     display: flex;
     gap: 35px;
@@ -982,9 +986,10 @@ p.valid  {
    
 }
 
+
 .payment__calc h6 {
     font-weight: 700;
-    padding: 0 0 0 35px;
+    padding: 0 10px 0 35px;
 }
 
 .payment__calc-info h6:before {
@@ -1059,8 +1064,9 @@ p.valid  {
 .client__item__info {
     padding: 15px;
 }
-.client__item__info h5 {
-    margin-bottom: 15px;
+.client__item__info h6 {
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 
@@ -1140,7 +1146,7 @@ p.valid  {
     background: #FFFFFF;
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    padding: 30px 16px;
+    padding: 20px 16px;
     cursor: pointer;
     /* display: flex;
     flex-direction: column;
