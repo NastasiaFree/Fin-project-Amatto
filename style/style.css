@@ -1,0 +1,1464 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #39373A;
+    font-weight: 500;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+input:focus {
+    outline: none;
+}
+html,
+body {
+    background-color: #ffffff;
+    height: 100%;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #39373A;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+.site {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex; /*/????*/
+    flex-direction: column;
+}
+
+._container {
+    width: 90%; /* нужно ли???*/
+    max-width: 1900px;
+    margin: 0 auto;
+}
+._itemScale {
+    transition: 0.5s;
+}
+/* Как сделать чтобы само возвращалось в исходный размер???? */
+._itemScale:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 93px;
+    font-weight: 800;
+}
+h2 {
+    font-size: 48px;
+    line-height: 59px;
+}
+h3 {
+    font-size: 43px;
+    line-height: 57px;
+    font-weight: 600;
+}
+h4 {
+    font-size: 32px;
+    line-height: 39px;
+}
+h5 {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 600;
+}
+h6 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/*********HEADER*********/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fffefe;
+    margin-bottom: 200px;
+    /* border-bottom: 2px solid rgb(233, 228, 228); */
+    box-shadow: 0px 2px 10px #39373A;
+    
+
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 104px;
+}
+
+/* рассмотреть другое расстояние??7 или ширину блока */
+.menu__list>li {
+    /* position: relative; */
+    margin: 0 0 0 30px;
+}
+
+
+/* .header__menu ul {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    justify-content: space-between;
+} */
+/* .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+} */
+/* .active {
+    color: #FFCC29;
+}
+.active:after {
+    display: block;
+    background-color: #FFCC29;
+    height: 2px;
+    content: "";
+    
+} */
+.menu__link {
+    position: relative;
+    font-size: 18px;
+    font-weight: 560;
+    /* озможно переделать???????????????? */
+}
+.menu__link:hover{
+    color: #FFCC29;
+} 
+.menu__link:after {
+    display: block;
+    background-color: #FFCC29;
+    height: 2px;
+    content: "";
+    transition: 0.3s ease-out;
+    left: -15%;
+    position: absolute;
+    width: 0;
+}
+.menu__link:hover:after,
+.menu__link:focus:after {
+    width: 130%;
+}
+/* Фокус не работает???? каксделать чтобы оставалось подчеркивание после нажимания */
+
+
+.header__phone {
+    padding: 16px 24px;
+    background-color: #FFCC29;
+    border-radius: 40px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+/*********PROMO*******/
+.promo {
+    color: #ffffff;
+  
+    background: url("../img/2-opt\ 2.png") top 80px left 0 no-repeat #111111;
+    background-size: cover;
+    min-height: 760px;
+    display: flex;
+    align-items: center;
+    /* padding: 150px 0; */
+}
+.promo__info {
+    /* padding: 268px 0 118px; */
+   
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+span { 
+     color: #FFCC29;  /*перенести вверх*** */
+}
+.promo__info h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.pop_but {
+    padding: 20px 25px;
+    background-color: #FFCC29;
+    border-radius: 40px;
+    width: 300px;
+}
+.promo__info h5 {
+    margin-bottom: 21px;
+    text-align: center;
+}
+
+.promo__info ul li{
+    padding: 0 0 0 30px;
+    background: url('../img/yellHeart.png') left center no-repeat;
+    /* list-style-image: url('../img/yellHeart.png');  */
+    /* align-items: center; */
+}
+.promo__info li:not(:last-child) {
+    margin-bottom: 17px;
+}
+.promo__info li:last-child {
+    margin-bottom: 50px;
+}
+/* .promo__info li:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background:url("../img/yellHeart.png") ;
+} */
+
+/* ***********************POP UP**************************** */
+.pop_up {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 20;
+    color: #111111;
+    transform: translateX(55%) scale(0);
+    transition: .6s ease-in-out;
+}
+.pop_up.active {
+    /* display: block; */
+    transform: translateX(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
+.pop_up_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pop_up_body {
+    margin: auto;
+    width: 580px;
+    background-color: #ffcc28;
+    border-radius: 18px;
+    padding: 50px 15px;
+    position: relative;
+    text-align: center;
+}
+.pop_up p {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 600;
+    color: #22262D;
+    margin-bottom: 40px;
+}
+
+
+.pop_up_body input {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 330px;
+    padding: 17px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    /* border: none; */
+    /* font-weight: 600; */
+    font-size: 18px;
+    color: #3d3e3f;
+    
+}
+.invalid {
+    border: 1px solid red;
+}
+
+/* .pop_up_body input:focus {
+    outline: none;
+} */
+.pop_up_body button {
+    cursor: pointer;
+    display: block;
+    width: 330px;
+    margin: 40px auto 0px auto;
+    padding: 20px 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffcc29;
+    border-radius:20px;
+    background-color: #222121d2;
+    box-shadow: 4px 2px 15px #22262D;
+}
+.pop_up_body button:hover {
+    background-color: #131212e3;
+    color: #FFFFFF;
+    box-shadow: 6px 3px 35px #FFFFFF;
+    /* border: 2px solid #f8f8f7; */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+}
+p.valid  {
+    position: absolute;
+    color: #00000085;
+    font-weight: normal;
+    font-size: 18px;
+}
+#popTelValid {
+    bottom: 82px;
+    left: 140px;
+    
+}
+#popNameValid{
+    bottom: 160px;
+    left: 140px;
+    
+}
+
+.pop_up_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+.pop_upFin {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 21;
+    color: #111111;
+    transform: translateX(-55%) scale(0);
+    transition: .6s ease-in-out;
+}
+.pop_upFin.act {
+    /* display: block; */
+    transform: translateX(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
+.pop_upFin_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pop_upFin_body {
+    margin: auto;
+    width: 580px;
+    background-color: #ffcd29e8;
+    border-radius: 38px;
+    padding: 50px 15px 50px 15px;
+    position: relative;
+    text-align: center;
+}
+.pop_upFin p {
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 600;
+    color: #22262D;
+    /* margin-bottom: 20px; */
+}
+.pop_upFin_close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 21px;
+    cursor: pointer;
+}
+.pop_upFin_body h2 {
+    color: red;
+    font-size: 70px;
+}
+
+
+/************CHOOSE***************/
+.choose {
+    padding: 70px 0;
+    
+}
+/* .choose__title {
+     margin: 0 auto;
+     text-align: center;
+     max-width: 729px;
+     margin-bottom: 60px;
+} */
+
+.choose__items {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.choose__item {
+    width: 230px;
+    height: 370px;
+    background-repeat: no-repeat;
+    
+    border-radius: 10px;
+    padding: 19px;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.choose__item h5 {
+    color: #ffffff;
+}
+.eskiz{
+    background: url("../img/eskiz.png") no-repeat ;
+    background-size: cover;
+}
+.kach {
+    background: url("../img/mater.png") no-repeat ;
+    background-size: cover;
+}
+.furn {
+    background: url("../img/furniture.png") no-repeat ;
+    background-size: cover;
+}
+.d3 {
+    background: url("../img/3d.png") no-repeat ;
+    background-size: cover;
+}
+.sale {
+    background: url("../img/sale.png") no-repeat ;
+    background-size: cover;;
+}
+
+
+/*******************ORDER*******************/
+.order {
+    background: url("../img/moika.png") left 0 top 0  no-repeat,
+     url("../img/orderVector.png") left -50px top 0 no-repeat,
+    url("../img/order.png") right 0 no-repeat;
+   height: 492px;
+   display: flex;
+   align-items: center;
+   /* padding: 180px; */
+}
+.order__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    align-items: center;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: 0;
+}
+.order__info ._title {
+    margin-bottom: 20px;
+}
+.order__info h6 {
+    background-color: #ffcc28;
+    padding: 7px 60px;
+    border-radius: 45px;
+    /* width: 400px; */
+    color: #111111;
+
+}
+.order__time {
+    background:#ffcc28;
+    border-radius: 10px;
+    width: 388px;
+    height: 74px;
+}
+
+
+
+
+
+
+
+
+.order__time {
+    display: flex;
+    justify-content: center;
+}
+.timer__items {
+    display: flex;
+    font-size: 48px;
+    align-items: center;
+    color: #39373A;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .timer__item {
+    position: relative;
+    min-width: 60px;
+    margin: 0 auto;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    /* spadding-bottom: 15px; */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -27px;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+
+  .timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/***********MAKE*******************/
+.make {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.make__cards {
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px 7px;
+    margin-bottom: 40px;
+  }
+
+.make__item {
+    width: 400px;
+    height: 290px;
+    /* border-radius: 10px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+    /* border: 3px solid black; */
+}
+.card {
+    position: relative;
+    /* perspective: 1000px; */
+}
+/* Убрать класс card??? */
+ .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* left: 0;
+    top: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: center; */
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    /* cursor: pointer; */
+  }
+  /* .front {
+    background-color: rgb(202, 82, 82);
+    border: 1px solid black;
+  } */
+  /* .kitchen2 {
+    background: url("../img/kitchen2.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+} */
+  .back {
+    background-color: #F9F9F9;
+    transform: rotateY(180deg);
+    justify-content: space-around;
+    padding: 15px 20px ;
+    box-shadow: 2px 3px 10px #39373A;
+}
+
+/* Остаить курсив или убрать???? */
+
+.back__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.back__price p {
+    background-color: #FFCC29;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.back__cont {
+    background-color: #FFCC29;
+    padding: 15px;
+    width: 150px;
+    border-radius: 20px;
+    margin: 0 auto;
+    /* cursor: grab; */
+    cursor: pointer;
+    font-weight: 700;
+}
+.back__cont:hover {
+    background-color: #39373A;
+    color: #FFCC29;
+}
+.kitchen1 {
+    background: url("../img/kitchen1.jpg") no-repeat;
+    background-size: cover;
+}
+.kitchen2 {
+    background: url("../img/kitchen2.jpg") no-repeat;
+    background-size: cover;
+}
+.kitchen3 {
+    background: url("../img/kitchen3.jpg") no-repeat;
+    background-size: cover;
+}
+.kitchen4 {
+    background: url("../img/kitchen4.jpg") no-repeat;
+    background-size: cover;
+}
+.kitchen5 {
+    background: url("../img/kitchen5.jpg") no-repeat;
+    background-size: cover;
+}
+.kitchen6 {
+    background: url("../img/kitchen6.jpg") no-repeat;
+    background-size: cover;
+}
+.make_name {
+    color: #FFCC29;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+.make__price {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0px 10px 10px 0px;
+    width: 255px;
+    height: 78px;
+    margin-bottom: 40px;
+    padding: 0 0 0 20px;
+}
+.make__price h4 {
+    color: #ffffff;
+}
+.make__price p {
+    color:  rgba(255, 255, 255, 0.69);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    /* padding: 0 20px; */
+}
+
+/* .makes {
+    margin-bottom: 40px;
+} */
+/* ссылка что открывает????? */
+.make__but {
+    width: 287px;
+    height: 54px;
+    background: #FFCC29;
+    border-radius: 40px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #39373A;
+}
+
+
+/* ******* flip??????? */
+
+  
+ 
+ 
+  .card:hover .front {transform: rotateY(180deg);}
+  .card:hover .back {transform: rotateY(360deg);}
+  
+.wer {
+    background-color: #ffcc29;
+    border-radius: 28px;
+    width: 150px;
+    height: 35px;
+}
+
+
+
+
+
+
+
+/**********PLUS***********/
+.plus {
+    padding: 30px 0 60px;
+    text-align: center;
+}
+
+.plus__items {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.plus__item {
+    width: 280px;
+    height: 314px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 37px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+.plus__item img {
+    width: 55px;
+    height: 55px;
+}
+.plus__item h5{
+    text-transform: uppercase;
+}
+
+
+
+
+/************DISCONT*************/
+.discont {
+    background: url("../img/banner_discont.png") no-repeat ;
+    background-size: cover;
+    height: 555px;
+    /* text-align: right; */
+    /* display: flex;
+    justify-content: center; */
+  display: flex;
+  position: relative;
+    /* Рассмотреть другой вариант как расположить справа по центру (может как блок с часами??)   и как потом при адаптиве,может яркость картинки уменьшить************* */
+}
+
+.discont__info {
+    margin:auto;
+    position: relative;
+    z-index: 3;
+    
+    /* display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: center; */
+    
+    text-align: right; 
+    /* max-width: 700px;  */
+    /* margin-right: auto; */
+    
+}
+.discont__info h1 {
+    /* font-weight: 600;
+    font-size: 85px;
+    line-height: 104px; */
+    text-transform: capitalize;
+    color: #FFCC29;
+}
+.discont__info h2 {
+    /* font-size: 48px;
+    line-height: 59px; */
+    margin-bottom: 20px;
+}
+.discont__info h5 {
+    margin-bottom: 47px;
+    font-weight: normal;
+}
+/* .discont__but {
+    display: block;
+    padding: 20px 40px;
+    border-radius: 40px;
+    background: #FFCC29;
+    max-width: 200px;
+    
+} */
+
+
+
+/****************CASEVIDEO**************/
+.caseVideo {
+    padding: 50px 0 80px 0;
+    text-align: center;
+}
+
+.video {
+    display: flex;
+    /* gap:5px; */
+    row-gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* margin-bottom: 50px; */
+}
+
+
+
+
+
+/****************ADVICE*****************/
+.advice {
+    background: url("../img/Mask\ group.png"), #FFCC29;
+    height: 400px;
+    background-size: cover;
+}
+.advice__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    max-width: 700px;
+    /* gap: 30px; */
+    padding: 70px 0;
+    height: 100%;
+}
+.advice__note {
+    display: flex;
+    gap: 35px;
+    position: relative;
+}
+.advice__note input {
+    width: 344px;
+    height: 47px;
+    border-radius: 28px;
+    background-color:#ffffff;
+    padding: 0 20px;
+    color: #39373A;
+    /* border: none; */
+}
+.pop_up_body input:focus {
+    outline: none;
+}
+.advice__but {
+    background: #39373A;
+    border-radius: 28px;
+    color: #ffffff;
+    padding: 14px 31px;
+    cursor: pointer;
+}
+
+#valid {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    color: #00000085;
+}
+
+
+
+
+
+
+
+
+
+/**************MISSION****************/
+.mission {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mission h6 {
+    margin-bottom: 45px;
+    max-width: 691px;
+    margin: 0 auto;
+}
+.mission iframe {
+    padding: 45px 0;
+/* как загруглить края?????? */
+}
+
+
+
+
+/*********PAYMENT**************/
+.payment__blocks {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 10px; */
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.payment__calc {
+    background: #F9F9F9;
+    border-radius: 10px;
+    max-width: 600px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px 0;
+    /* padding: 0 35px; */
+    
+    
+}
+/* @media (max-width: 1024px) {
+    .payment__img {
+        display: none;
+    }
+} */
+.payment__img {
+    width: 550px;
+    height: 650px;
+    background: url("../img/payment.png") center right 0 no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.payment__calc input,
+.payment__calc select {
+    width: 218px;
+    height: 47px;
+    background-color: #ffffff;
+    padding: 0 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 46px;
+    cursor: pointer;
+}
+.payment__calc select {
+    appearance: none;
+    /* overflow: hidden; */
+    background: url('../img/arrow.png') no-repeat  center right 5% #ffffff;
+    background-size: 12%;
+}
+.payment__calc-info {
+    display: flex;
+    /* gap: 30px; */
+}
+.payment form,
+.payment__calc-data {
+    padding: 0 35px;
+}
+.payment__calc-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment__calc-total {
+    background: #f1f0f0;
+    text-transform: uppercase;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.payment__calc h6 {
+    font-weight: 700;
+    padding: 0 0 0 35px;
+}
+
+.payment__calc-info h6:before {
+    display: block;
+    background-color: #FFCC29;
+    height: 5px;
+    content: "";
+    width: 5px;
+    margin-left: -12px;
+    margin-bottom: -16px; 
+     
+}
+
+
+.payment__form p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-bottom: 20px;
+}
+
+.payment_but {
+    background-color: #FFCC29;
+    font-weight: 600;
+    width: 530px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************CLIENT*************/
+.client {
+    padding: 40px 0;
+    
+}
+
+.client__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.client__item {
+    width: 220px;
+    height: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.client__item img {
+    width: 220px;
+    
+}
+.client__item__info {
+    padding: 15px;
+}
+.client__item__info h5 {
+    margin-bottom: 15px;
+}
+
+
+
+/***************PROFI***************/
+.profi {
+    background: #F9F9F9;
+    padding: 40px 0;
+}
+/* .profi ._title{
+    margin-bottom: 60px;
+} */
+.profi__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px 0 0 0;
+}
+.profi__item {
+    width: 315px;
+    height: 452px;
+    text-align: center;
+       
+}
+.profi__item img {
+    margin-bottom: 18px;
+    background:url("../img/Ellipse\ 11\ \(2\).png")
+}
+.profi__item h6 {
+    margin-bottom: 7px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.designed  {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 7px;
+}
+
+
+/******MISTAKE***********/
+.mistake {
+    padding: 50px 0;
+}
+
+/* Вынести все title items отдельно? */
+._title {
+    max-width: 660px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+}
+._title:after {
+    display: block;
+    background-color: #FFCC29;
+    height: 5px;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 14px;  
+}
+._items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+/******************************/
+
+.mistake__item {
+    width: 270px;
+    height: 323px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 30px 16px;
+    cursor: pointer;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    
+       
+}
+.mistake__item h5 {
+    margin-bottom: 12px;
+}
+.number {
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+     background: url("../img/Vector\ 11.png") top 13px right 0  no-repeat #FFDC29;
+}
+
+
+/* .vector {
+    top: 50%;
+    position: absolute;
+    left: 20px;
+    z-index: 99;
+} */
+.mistake__item:hover {
+    background-color: #FFCC29;;
+}
+.mistake__item:hover .number {
+    background: url("../img/Vector12.png") top 14px right -3px  no-repeat #39373A;
+    /* background-color: #292722; */
+}
+
+
+
+/***************BLOG*********************/
+.blog {
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.blog__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.blog__item {
+   max-width: 350px;
+    height: 550px;
+    /* background: #F9F9F9; */
+    border-radius: 10px;
+    padding: 16px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fdfeff;
+    height: 400px;
+    box-shadow: #d8b95375 0px 4px 12px;
+    overflow: hidden;
+}
+.blog_but {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-transform: uppercase;
+    background: #FFCC29;
+    border-radius: 28px;
+    /* width: 179px;
+    height: 50px; */
+    padding: 15px;
+    font-weight: 600;
+   
+    /* display: block;
+     text-align: center; */
+}
+/*************https://www.whitelabeldevelopers.ru/articles/20-udivitelnyix-animirovannyix-knopok-na-chistom-css */
+/* Рассмотреть вариант 3 */
+
+.btn:link,
+.btn:visited {
+    /* text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px; */
+    transition: all .2s;
+    /* position: absolute; */
+
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* .btn-white {
+    background-color: #fff;
+    color: #777;
+} */
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #FFCC29;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+.shadowBlog {
+    font-size: 24px;
+    line-height:32px;
+    font-weight: 700;
+    transition: all .3s ease-out 0s;
+}   /* Разобраться с transition */
+
+.shadowBlog:hover {
+    color: #FFCC29;
+    text-shadow: 2px 1px 2px rgb(19, 16, 17);
+}
+
+.run {
+    transition: all .6s ease-out;
+    transform: translateX(400px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: #FFCC29;
+    border-radius: 28px;
+    width: 159px;
+    height: 35px;
+}
+.run a {
+    font-weight: 700;
+}
+.blog__item:hover .run {
+   transform: translateX(0px);
+   
+}
+
+
+
+
+/*******************FOOTER*****************/
+.footer {
+    padding: 30px 0 ;
+    /* margin: 0 auto; */
+    
+}
+.footer__main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.ico {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    /* background-repeat: no-repeat; */
+    /* background: #ffcc28; */
+    /* background-position: center; */
+    border-radius: 50%;
+}
+.ico_fb {
+    background: url("../img/facebook.png") center no-repeat #FFCC29;
+}
+.ico_linked {
+    background: url("../img/linkedin.png") center no-repeat #FFCC29;
+}
+.ico_inst {
+    background: url("../img/instagram.png") center no-repeat #FFCC29;
+}
+.ico_yout {
+    background: url("../img/youtube.png") center no-repeat #FFCC29;
+}
+.location {
+    background: url("../img/location.png") no-repeat;
+}
+.number_cont {
+    background: url("../img/number.png")  no-repeat ;
+}
+.mail {
+    background: url("../img/mail.png")  no-repeat;
+}
+details p {
+    padding-left: 30px;
+    background-position: left 0 center;
+}
+
+.footer__logo {
+    width: 434px ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.underline {
+    margin-bottom: 19px; 
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.underline:after {
+    display: block;
+    background-color: #FFCC29;
+    height: 3px;
+    content: "";
+    width: 49px;
+    /* margin: 0 auto; */
+    margin-top: 7px; 
+}
+.social_links a:not(:last-child) {
+    margin-right: 15px;
+}
+details p:not(:last-child) {
+    margin-bottom: 15px;
+}
+.footer__nav li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+
+
+.footer__contacts {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer__links {
+    padding: 20px 0;
+}
+/* Открытие с задержкой */
+details[open] {
+    animation: spoiler 2s;
+  }
+  @keyframes spoiler {
+    0%   {opacity: 0;}
+   
+    100% {opacity: 1;}
+  }
+/* https://habr.com/ru/post/465623/   - js чтобы закрывались остальные */
+.reserv {
+    text-align: center;
+}
+.reserv:before {
+    display: block;
+    background: rgba(57, 55, 58, 0.3);
+    height: 1px;
+    content: "";
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 14px; 
+}
+
+.up {
+    position: absolute;
+    bottom: 15%;
+    right: 80px;
+    z-index: 4;
+}
+
+.up a {
+    display: none;
+    position: fixed;
+}
+  
+
+/*ССЫЛКИ
+ https://vertex-academy.com/tutorials/ru/ssylki/ */
