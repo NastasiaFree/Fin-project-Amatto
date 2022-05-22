@@ -7,30 +7,37 @@
     <meta name="keywords" content="кухни, купить кухню, заказать кухню, дизайн, рассрочка">
     <meta name="description" content="Стильные кухни на заказ от производителя по цене ниже рынка. Бесплатный дизайн проект.Гарантия.Производство в краткие сроки.">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media.css">
     <title>Amatto</title>
     
 </head>
 <body>
     <div class="site">
-        <div class="header _container">
-            <div class="header__logo">
-                <a href="#"><img src="img/logo-en-black-2 1.png" alt=""></a>
+        <div class="header ">
+            <div class="header__container _container">
+                <div class="header__logo">
+                    <a href="#"><img src="img/logo-en-black-2 1.png" alt=""></a>
+                </div>
+                <div class="header__menu menu">
+                    <div class="menu__burg">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu-nav">
+                        <ul class="menu__list">
+                            <li><a class="menu__link" href="">Главная</a></li>
+                            <li><a class="menu__link" href="#about">О нас</a></li>
+                            <li><a class="menu__link" href="">Каталог</a></li>
+                            <li><a class="menu__link" href="#payment">Рассрочка</a></li>
+                            <li><a class="menu__link" href="blog.html"  target="_blanc">Блог</a></li>
+                            <li><a class="menu__link" href="#footer">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__phone">
+                    <p>+373 68 159 159</p>
+                </div> 
             </div>
-            <div class="header__menu">
-                <nav class="header__menu-nav">
-                    <ul class="menu-list">
-                        <li><a class="active" href="">Главная</a></li>
-                        <li><a href="#about">О нас</a></li>
-                        <li><a href="">Каталог</a></li>
-                        <li><a href="#payment">Рассрочка</a></li>
-                        <li><a href="blog.html" target="_blanc">Блог</a></li>
-                        <li><a href="#footer">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="header__phone">
-                <p>+373 68 159 159</p>
-            </div>
+           
         </div>
 
         <div class="promo">
@@ -55,8 +62,8 @@
                     <div class="pop_up_body" id="pop_up_body">
                         <p>Оставьте свои данные и мы с вами свяжемся в скором времени:</p>
                         <form class="popForm" action="">
-                            <input type="text" name="name" id="popName" placeholder="Имя" required onkeydown="validation()">
-                            <input type="text" name="tel" id="popTel" placeholder="Телефон" required onkeydown="validation()">
+                            <input class="popi" type="text" name="name" id="popName" placeholder="Имя" required onkeyup="validation()">
+                            <input class="popi"  type="text" name="tel" id="popTel" placeholder="Телефон" required onkeydown="validation()">
                             <button id="but_pop">Оставить заявку</button>
                             <p class="valid" id="popTelValid"></p>
                             <p class="valid" id="popNameValid"></p>
@@ -155,6 +162,7 @@
                             <h5>Рассрочка <small>12 месяцев</small> </h5>
                             <p>354 $</p>
                         </div>
+                        
                         <button class="back__cont">Оставить заявку</button>
                         <!-- <div >
                             <a href="#" id="open_pop_up" class="pop_but">Бесплатная Консультация Дизайнера</a>
@@ -468,112 +476,12 @@
             </div>
 
 
-            <!-- <div class="makes _items ">
-                <div class="make__item kitchen1">
-                    <h4 class="make_name">D 1</h4>
-                    <div class="make__price">
-                        <h4> <span>654</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen2">
-                    <h4 class="make_name">D 2</h4>
-                    <div class="make__price">
-                        <h4> <span>454</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen3">
-                    <h4 class="make_name">D 3</h4>
-                    <div class="make__price">
-                        <h4> <span>254</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen4">
-                    <h4 class="make_name">D 4</h4>
-                    <div class="make__price">
-                        <h4> <span>164</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen5">
-                    <h4 class="make_name">D 5</h4>
-                    <div class="make__price">
-                        <h4> <span>205</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen6">
-                    <h4 class="make_name">D 6</h4>
-                    <div class="make__price">
-                        <h4> <span>302</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen1">
-                    <h4 class="make_name">D 7</h4>
-                    <div class="make__price">
-                        <h4> <span>208</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen2">
-                    <h4 class="make_name">D 8</h4>
-                    <div class="make__price">
-                        <h4> <span>454</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-                <div class="make__item kitchen3">
-                    <h4 class="make_name">D 9</h4>
-                    <div class="make__price">
-                        <h4> <span>335</span> $/месяц </h4>
-                        <p>без первоначального взноса - 12 месяцев</p>
-                    </div>
-                </div>
-
-
-                <div class="make__item ">
-                    <ul id="flip" class="profiles cf">
-                        <li><img class="pic" src="img/kitchen2.jpg" height="290" width="350" alt="">
-                        <ul class="info">
-                            <li>Стильная и комфортная кухня</li>
-                            <li>Фасады -Egger</li>
-                            <li>Столешница - Egger</li>
-                            <li>Фурнитура - Hettich</li>
-                           <li>
-                                <div class="flip_price">
-                                    <p>Цена</p>
-                                    <p>102000</p>
-                                </div>
-                            </li> 
-                            <li>
-                                <div class="flip_price">
-                                    <p>Рассрочка</p>
-                                    <p>102000</p>
-                                </div>
-                            </li> 
-                            <li>
-                                <div class=" ">
-                                    <a href="blog12.html" target="_blank">Прочитать</a>
-                                 </div>
-                            </li>
-                        </ul>
-                        </li>
-
-                    </ul>
-
-                   
-                </div>
-            </div> -->
-
             <button class="make__but">Раскрыть ещё</button>
 
         </div>
 
         <div class="plus _container">
-            <div class="plus__title">
+            <div class="_title">
                 <h3>Наши преимущества</h3>
             </div>
             <div class="plus__items">
@@ -615,7 +523,10 @@
         </div>
 
         <div class="caseVideo _container">
-            <h3>Наши видео кейсы</h3>
+            <div class="_title">
+                <h3>Наши видео кейсы</h3>
+            </div>
+            
             <div class="video">
                 <iframe width="400" height="264" src="https://www.youtube.com/embed/eT5XqOpvmbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe width="400" height="264" src="https://www.youtube.com/embed/OWhBfOLJzVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -624,7 +535,7 @@
             </div>
         </div>
 
-
+      
 
         <div class="advice">
             <div class="advice__info _container">
@@ -634,7 +545,7 @@
                 <h6>Вы узнаете точную <b>стоимость вашей кухни</b>  и получите <b>3D-проект</b> </h6>
                 <div class="advice__note">
                     <input type="tel" name="phone" id="telep" placeholder="Ваш Телефон" required="required" onkeydown="validation()" >
-                    <button id="but_tel_pop" class="advice__but butLocal" >Записаться</button>
+                    <button id="but_tel_pop" class="advice__but butLocal pop_fin" >Записаться</button>
                     <p id="valid"></p>
                 </div>
                 
@@ -643,7 +554,10 @@
 
 
         <div class="mission _container">
-            <h3 id="about">Миссия Amatto</h3>
+            <div class="_title">
+                <h3 id="about">Миссия Amatto</h3>
+            </div>
+            
             <h6>Мы стремимся создать идеальное пространство в котором человеку будет комфортно находиться, отдыхать, готовить и весело проводить время со своими друзьями и близкими.</h6>
             <iframe width="900" height="700" src="https://www.youtube.com/embed/_oCC1G9DEew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -652,18 +566,18 @@
 
         <div  class="payment _container">
             <div id="payment" class="_title">
-                <h3>Покупай  рассрочку</h3>
+                <h3>Покупай в рассрочку</h3>
             </div>
             <div class="payment__blocks">
                 <div class="payment__calc">
-                    <h6 >Ваша новая кухня без денег и предоплаты!</h6>
+                    <h6 class="payment__h6" >Ваша новая кухня без денег и предоплаты!</h6>
                     <div class="payment__calc-info">
                         <h6>Рассрочка 12 Месяцев</h6>
                         <h6>Без Комиссии и Переплат</h6>
                     </div>
                     <form class="payment__form" id="payment" action="">
                         <p>Ваш бюджет $: <input type="text" name="budget" id="budget" value="" placeholder="$"></p>
-                        <p>Промежуток <br> Рассрочки В Месяцах: :
+                        <p>Промежуток <br> Рассрочки В Месяцах:
                             <select name="month" id="month" required>
                                 <option value="3">3 месяца</option>
                                 <option value="6">6 месяцев</option>
@@ -689,11 +603,11 @@
                         <h6 id="total"></h6>
                     </div>
                     <div class="payment__calc-data">
-                        <input type="text" placeholder="Ваше имя:" name="namePay">
-                        <input type="tel" placeholder="Ваш телефон" name="telPay">
+                        <input  type="text" placeholder="Ваше имя:" name="name" id="payName">
+                        <input  type="tel" placeholder="Ваш телефон" name="tel" id="payTel">
                     </div>
                      
-                    <button id="but_pay_pop" class="payment_but">Отправить Заявку На Рассрочку</button>
+                    <button id="but_pay_pop" class="payment_but pop_fin">Отправить Заявку На Рассрочку</button>
                 </div>
                 <div class="payment__img">
                     <!-- <img src="img/payment.png" alt=""> -->
@@ -706,7 +620,7 @@
 
 
         <div class="client _container">
-            <div class="client__title">
+            <div class="_title">
                 <h3>Как выстроен процесс работы с клиентами</h3>
             </div>
             <div class="client__items">
@@ -754,8 +668,8 @@
 
         <div class="profi">
             <div class="_container">
-                <div class="profi__title">
-                    <h3>Как выстроен процесс работы с клиентами</h3>
+                <div class="_title">
+                    <h3>Доверьте вашу кухню профессионалам</h3>
                 </div>
                 <div class="profi__items">
                     <div class="profi__item">
@@ -830,9 +744,9 @@
                 </h3>
                 <h6>Вы узнаете точную <b>стоимость вашей кухни</b>  и получите <b>3D-проект</b> </h6>
                 <div class="advice__note">
-                    <input type="tel" name="phon" placeholder="Ваш Телефон" 
+                    <input type="tel" name="phone" placeholder="Ваш Телефон" 
                     >
-                    <button id="but_tel_pop2" class="advice__but butLocal2">Записаться</button>
+                    <button id="but_tel_pop2" class="advice__but butLocal2 pop_fin">Записаться</button>
                     <!-- <input type="tel" name="phone" placeholder="Ваш Телефон">
                     <button id="but_tel_pop2" class="advice__but" >Записаться</button> -->
                     <p class="valid"></p>
@@ -915,25 +829,25 @@
                         <p class="number_cont">+373 68 159 759</p>
                         <p class="mail">hello@amatto.md</p>
                     </details>
-                    <details >
-                        <summary class="underline">Republic Of Moldova</summary>
-                        <p class="location">Chisinau,15/2 Trandafirilor Str.</p>
-                        <p class="number_cont">+373 68 159 759</p>
+                    <details open class="det">
+                        <summary class="underline">Republic Of Belgium</summary>
+                        <p class="location">Sint-Barbarastraat 3</p>
+                        <p class="number_cont">+32497037031</p>
                         <p class="mail">hello@amatto.md</p>
                     </details>
-                    <details >
-                        <summary class="underline">Republic Of Moldova</summary>
-                        <p class="location">Chisinau,15/2 Trandafirilor Str.</p>
-                        <p class="number_cont">+373 68 159 759</p>
+                    <details open class="det">
+                        <summary class="underline">Republic Of Norway</summary>
+                        <p class="location">Sadnes skytebaneveien 8D</p>
+                        <p class="number_cont">+4793960237</p>
                         <p class="mail">hello@amatto.md</p>
                     </details>
                 </div>
             </div>
            
             <p class="reserv">© 2022 Amatto. All Rights Reserved.</p>
-          <div class="up">
-            <a href='#' id='up'> <img src="img/up.png" alt=""> </a>
-        </div>  
+            <div class="up">
+                <a href='#' id='up'> <img src="img/up.png" alt=""> </a>
+            </div>  
         </footer>
         
         <!-- <a href="mailto:contacts@vertex-academy.com">Свяжитесь с нами</a>
@@ -945,5 +859,7 @@
     <script src="scripts/payment.js"></script>
     <script src="scripts/api.js"></script>
     <script src="scripts/validate.js"></script>
+    <script src="scripts/advice.js"></script>
+    <!-- <script src="header.js"></script> -->
 </body>
 </html>
