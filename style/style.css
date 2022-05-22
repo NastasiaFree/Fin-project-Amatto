@@ -624,6 +624,8 @@ p.valid  {
     font-weight: 700;
     padding: 10px 15px;
     border-radius: 10px;
+    width: 90px;
+    text-align: center;
 }
 .back__cont {
     background-color: #FFCC29;
