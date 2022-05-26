@@ -276,11 +276,14 @@
     }
     .advice__note {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
     .mistake__item {
-            width: 300px;
-            height: 300px;
+        width: 300px;
+        height: 300px;
+    }
+    #valid {
+        bottom: 50px;
     }
 
     .footer__nav {
@@ -309,8 +312,6 @@
         width: 60px;
         height: 60px;
     }
-
-    
 
 }
 
@@ -360,7 +361,14 @@
     .timer__items {
         font-size: 35px;
     }
-    
+    .pop_up_body {
+        width: 400px;
+    }
+    #popTelValid,
+    #popNameValid {
+        left: 40px;
+    }
+   
 }
 
 @media (max-width:370px) {
@@ -394,5 +402,29 @@ h6 {
     width: 300px;
     height: 400px;
 }
+.pop_up_body {
+    width: 300px;
+}
 
+#popNameValid {
+    left: 30px;
+}
+.pop_up_body input {
+    width: 270px;
+}
+#popTelValid {
+    left: 0px;
+    bottom: 70px;
+    line-height: 20px;
+}
+.pop_up_body button {
+    width: 270px;
+}
+.advice {
+    height: 450px;
+}
+#valid {
+    bottom: 48px;
+    left: 0;
+}
 }

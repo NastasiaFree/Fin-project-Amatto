@@ -60,6 +60,28 @@ body {
 ._itemScale:hover {
     transform: scale(1.1);
 }
+._title {
+    max-width: 660px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+}
+._title:after {
+    display: block;
+    background-color: #FFCC29;
+    height: 5px;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 14px;  
+}
+._items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+}
 
 h1 {
     font-size: 70px;
@@ -659,9 +681,8 @@ a.make__but {
     background: url("../img/banner_discont.png") top 0 left -25px no-repeat ;
     background-size: cover;
     height: 555px;
-  display: flex;
-  position: relative;
-    /* Рассмотреть другой вариант как расположить справа по центру (может как блок с часами??)   и как потом при адаптиве,может яркость картинки уменьшить************* */
+    display: flex;
+    position: relative;
 }
 
 .discont__info {
@@ -949,28 +970,7 @@ a.make__but {
 }
 
 
-._title {
-    max-width: 660px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 30px;
 
-}
-._title:after {
-    display: block;
-    background-color: #FFCC29;
-    height: 5px;
-    content: "";
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 14px;  
-}
-._items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 25px;
-}
 /******************************/
 
 .mistake__item {
@@ -1085,7 +1085,7 @@ a.make__but {
 
 .btn-animated {
     animation: moveInBottom 5s ease-out;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moveInBottom {
