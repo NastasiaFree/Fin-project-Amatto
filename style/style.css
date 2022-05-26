@@ -462,7 +462,9 @@ p.valid  {
     position: absolute;
     right: -15px;
   }
-
+#date {
+    font-size: 28px;
+}
 
 
 
