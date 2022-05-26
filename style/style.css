@@ -9,7 +9,7 @@
 a {
     text-decoration: none;
     color: #39373A;
-    font-weight: 500;
+    font-weight: 600;
 }
 ul,
 ol,
@@ -40,12 +40,11 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #39373A;
-    /*font-family: 'Poppins', sans-serif;*/
 }
 .site {
     min-height: 100%;
     overflow: hidden;
-    display: flex; /*/????*/
+    display: flex;
     flex-direction: column;
 }
 
@@ -57,7 +56,7 @@ body {
 ._itemScale {
     transition: 0.5s;
 }
-/* Как сделать чтобы само возвращалось в исходный размер???? */
+
 ._itemScale:hover {
     transform: scale(1.1);
 }
@@ -100,7 +99,6 @@ h6 {
     z-index: 10;
     background-color: #fffefe;
     margin-bottom: 200px;
-    /* border-bottom: 2px solid rgb(233, 228, 228); */
     box-shadow: 0px 2px 10px #39373A;
     
 
@@ -112,38 +110,15 @@ h6 {
     min-height: 104px;
 }
 
-/* рассмотреть другое расстояние??7 или ширину блока */
+
 .menu__list>li {
-    /* position: relative; */
     margin: 0 0 0 30px;
 }
 
-
-/* .header__menu ul {
-    display: flex;
-    align-items: center;
-    width: 600px;
-    justify-content: space-between;
-} */
-/* .menu__list {
-    display: flex;
-    flex-wrap: wrap;
-} */
-/* .active {
-    color: #FFCC29;
-}
-.active:after {
-    display: block;
-    background-color: #FFCC29;
-    height: 2px;
-    content: "";
-    
-} */
 .menu__link {
     position: relative;
     font-size: 18px;
     font-weight: 500;
-    /* озможно переделать???????????????? */
 }
 .menu__link:hover{
     color: #FFCC29;
@@ -162,7 +137,6 @@ h6 {
 .menu__link:focus:after {
     width: 130%;
 }
-/* Фокус не работает???? каксделать чтобы оставалось подчеркивание после нажимания */
 
 
 .header__phone {
@@ -174,29 +148,25 @@ h6 {
     font-weight: 500;
 }
 
+
 /*********PROMO*******/
 .promo {
     color: #ffffff;
-  
     background: url("../img/2-opt\ 2.png") top 80px left 0 no-repeat #111111;
     background-size: cover;
     min-height: 760px;
     display: flex;
     align-items: center;
-    /* padding: 150px 0; */
 }
 .promo__info {
-    /* padding: 268px 0 118px; */
-   
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 span { 
-     color: #FFCC29;  /*перенести вверх*** */
+     color: #FFCC29; 
 }
 .promo__info h1 {
     text-transform: uppercase;
@@ -216,8 +186,6 @@ span {
 .promo__info ul li{
     padding: 0 0 0 30px;
     background: url('../img/yellHeart.png') left center no-repeat;
-    /* list-style-image: url('../img/yellHeart.png');  */
-    /* align-items: center; */
 }
 .promo__info li:not(:last-child) {
     margin-bottom: 17px;
@@ -225,16 +193,10 @@ span {
 .promo__info li:last-child {
     margin-bottom: 50px;
 }
-/* .promo__info li:before {
-    content: "";
-    width: 22px;
-    height: 22px;
-    background:url("../img/yellHeart.png") ;
-} */
+
 
 /* ***********************POP UP**************************** */
 .pop_up {
-    /* display: none; */
     width: 100%;
     height: 100%;
     position: fixed;
@@ -247,7 +209,6 @@ span {
     transition: .6s ease-in-out;
 }
 .pop_up.active {
-    /* display: block; */
     transform: translateX(0%) scale(100%);
     background-color: rgba(0, 0, 0, .8);
 }
@@ -281,19 +242,13 @@ span {
     padding: 17px 20px;
     background-color: #ffffff;
     border-radius: 20px;
-    /* border: none; */
-    /* font-weight: 600; */
     font-size: 18px;
     color: #3d3e3f;
-    
 }
 .invalid {
     border: 1px solid red;
 }
 
-/* .pop_up_body input:focus {
-    outline: none;
-} */
 .pop_up_body button {
     cursor: pointer;
     display: block;
@@ -311,7 +266,6 @@ span {
     background-color: #131212e3;
     color: #FFFFFF;
     box-shadow: 6px 3px 35px #FFFFFF;
-    /* border: 2px solid #f8f8f7; */
     letter-spacing: 3px;
     text-transform: uppercase;
 
@@ -325,12 +279,10 @@ p.valid  {
 #popTelValid {
     bottom: 82px;
     left: 140px;
-    
 }
 #popNameValid{
     bottom: 160px;
     left: 140px;
-    
 }
 
 .pop_up_close {
@@ -343,7 +295,6 @@ p.valid  {
 
 
 .pop_upFin {
-    /* display: none; */
     width: 100%;
     height: 100%;
     position: fixed;
@@ -356,7 +307,6 @@ p.valid  {
     transition: .6s ease-in-out;
 }
 .pop_upFin.act {
-    /* display: block; */
     transform: translateX(0%) scale(100%);
     background-color: rgba(0, 0, 0, .8);
 }
@@ -380,7 +330,6 @@ p.valid  {
     text-align: center;
     font-weight: 600;
     color: #22262D;
-    /* margin-bottom: 20px; */
 }
 .pop_upFin_close {
     position: absolute;
@@ -398,14 +347,7 @@ p.valid  {
 /************CHOOSE***************/
 .choose {
     padding: 70px 0;
-    
 }
-/* .choose__title {
-     margin: 0 auto;
-     text-align: center;
-     max-width: 729px;
-     margin-bottom: 60px;
-} */
 
 .choose__items {
     display: flex;
@@ -418,12 +360,10 @@ p.valid  {
     width: 230px;
     height: 370px;
     background-repeat: no-repeat;
-    
     border-radius: 10px;
     padding: 19px;
     display: flex;
     align-items: flex-end;
-    
 }
 
 .choose__item h5 {
@@ -459,7 +399,6 @@ p.valid  {
    height: 492px;
    display: flex;
    align-items: center;
-   /* padding: 180px; */
 }
 .order__info {
     display: flex;
@@ -478,9 +417,7 @@ p.valid  {
     background-color: #ffcc28;
     padding: 7px 60px;
     border-radius: 45px;
-    /* width: 400px; */
     color: #111111;
-
 }
 .order__time {
     background:#ffcc28;
@@ -488,12 +425,6 @@ p.valid  {
     width: 388px;
     height: 74px;
 }
-
-
-
-
-
-
 
 
 .order__time {
@@ -506,17 +437,13 @@ p.valid  {
     align-items: center;
     color: #39373A;
     justify-content: space-between;
-    gap: 15px;
+    gap: 35px;
+    margin-bottom: 13px;
   }
 
   .timer__item {
     position: relative;
-    min-width: 60px;
     margin: 0 auto;
-    /* margin-left: 10px;
-    margin-right: 10px; */
-    /* spadding-bottom: 15px; */
-    margin-bottom: 20px;
     text-align: center;
   }
 
@@ -535,12 +462,6 @@ p.valid  {
     position: absolute;
     right: -15px;
   }
-
-
-
-
-
-
 
 
 
@@ -568,42 +489,24 @@ p.valid  {
 .make__item {
     width: 400px;
     height: 290px;
-    /* border-radius: 10px; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
-    /* border: 3px solid black; */
 }
 .card {
     position: relative;
-    /* perspective: 1000px; */
 }
-/* Убрать класс card??? */
+
+
  .front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* left: 0;
-    top: 0; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* align-items: center; */
     transition: 1s;
     backface-visibility: hidden;
     border-radius: 10px;
-    /* cursor: pointer; */
   }
-  /* .front {
-    background-color: rgb(202, 82, 82);
-    border: 1px solid black;
-  } */
-  /* .kitchen2 {
-    background: url("../img/kitchen2.jpg") no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-} */
+
   .back {
     background-color: #F9F9F9;
     transform: rotateY(180deg);
@@ -612,7 +515,6 @@ p.valid  {
     box-shadow: 2px 3px 10px #39373A;
 }
 
-/* Остаить курсив или убрать???? */
 
 .back__price {
     display: flex;
@@ -633,14 +535,10 @@ p.valid  {
     width: 150px;
     border-radius: 20px;
     margin: 0 auto;
-    /* cursor: grab; */
     cursor: pointer;
     font-weight: 700;
 }
-.back__cont:hover {
-    background-color: #39373A;
-    color: #FFCC29;
-}
+
 .kitchen1 {
     background: url("../img/kitchen1.jpg") no-repeat;
     background-size: cover;
@@ -686,40 +584,33 @@ p.valid  {
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
-    /* padding: 0 20px; */
 }
 
-/* .makes {
-    margin-bottom: 40px;
-} */
-/* ссылка что открывает????? */
-.make__but {
-    width: 287px;
-    height: 54px;
+
+a.make__but {
     background: #FFCC29;
     border-radius: 40px;
     font-size: 18px;
     line-height: 22px;
-    font-weight: 500;
     color: #39373A;
+    padding: 15px 35px;
+}
+.back__cont:hover,
+.make__but:hover{
+    background-color: #39373A;
+    color: #FFCC29;
 }
 
-
-/* ******* flip??????? */
-
-  
  
- 
-  .card:hover .front {transform: rotateY(180deg);}
-  .card:hover .back {transform: rotateY(360deg);}
-  
+.card:hover .front {transform: rotateY(180deg);}
+.card:hover .back {transform: rotateY(360deg);}
+        
 .wer {
     background-color: #ffcc29;
     border-radius: 28px;
     width: 150px;
     height: 35px;
 }
-
 
 
 
@@ -748,7 +639,6 @@ p.valid  {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* justify-content: space-around; */
     align-items: center;
 }
 .plus__item img {
@@ -764,12 +654,9 @@ p.valid  {
 
 /************DISCONT*************/
 .discont {
-    background: url("../img/banner_discont.png") no-repeat ;
+    background: url("../img/banner_discont.png") top 0 left -25px no-repeat ;
     background-size: cover;
     height: 555px;
-    /* text-align: right; */
-    /* display: flex;
-    justify-content: center; */
   display: flex;
   position: relative;
     /* Рассмотреть другой вариант как расположить справа по центру (может как блок с часами??)   и как потом при адаптиве,может яркость картинки уменьшить************* */
@@ -779,42 +666,19 @@ p.valid  {
     margin:auto;
     position: relative;
     z-index: 3;
-    
-    /* display: flex;
-    flex-direction: column;
-    height:100%;
-    justify-content: center; */
-    
     text-align: right; 
-    /* max-width: 700px;  */
-    /* margin-right: auto; */
-    
 }
 .discont__info h1 {
-    /* font-weight: 600;
-    font-size: 85px;
-    line-height: 104px; */
     text-transform: capitalize;
     color: #FFCC29;
 }
 .discont__info h2 {
-    /* font-size: 48px;
-    line-height: 59px; */
     margin-bottom: 20px;
 }
 .discont__info h5 {
     margin-bottom: 47px;
     font-weight: normal;
 }
-/* .discont__but {
-    display: block;
-    padding: 20px 40px;
-    border-radius: 40px;
-    background: #FFCC29;
-    max-width: 200px;
-    
-} */
-
 
 
 /****************CASEVIDEO**************/
@@ -825,11 +689,9 @@ p.valid  {
 
 .video {
     display: flex;
-    /* gap:5px; */
     row-gap: 30px;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* margin-bottom: 50px; */
 }
 
 
@@ -849,7 +711,6 @@ p.valid  {
     text-align: center;
     justify-content: space-around;
     max-width: 700px;
-    /* gap: 30px; */
     padding: 70px 0;
     height: 100%;
 }
@@ -868,7 +729,6 @@ p.valid  {
     background-color:#ffffff;
     padding: 0 20px;
     color: #39373A;
-    /* border: none; */
 }
 .pop_up_body input:focus {
     outline: none;
@@ -893,9 +753,6 @@ p.valid  {
 
 
 
-
-
-
 /**************MISSION****************/
 .mission {
     padding: 50px 0;
@@ -909,7 +766,6 @@ p.valid  {
 }
 .mission iframe {
     padding: 45px 0;
-/* как загруглить края?????? */
 }
 
 
@@ -919,7 +775,6 @@ p.valid  {
 .payment__blocks {
     display: flex;
     justify-content: space-around;
-    /* gap: 10px; */
     flex-wrap: wrap;
     align-items: center;
     
@@ -932,16 +787,9 @@ p.valid  {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 25px 0;
-    /* padding: 0 35px; */
-    
-    
+    padding: 25px 0; 
 }
-/* @media (max-width: 1024px) {
-    .payment__img {
-        display: none;
-    }
-} */
+
 .payment__img {
     width: 550px;
     height: 650px;
@@ -961,13 +809,11 @@ p.valid  {
 }
 .payment__calc select {
     appearance: none;
-    /* overflow: hidden; */
     background: url('../img/arrow.png') no-repeat  center right 5% #ffffff;
     background-size: 12%;
 }
 .payment__calc-info {
     display: flex;
-    /* gap: 30px; */
 }
 .payment form,
 .payment__calc-data {
@@ -985,7 +831,6 @@ p.valid  {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 
@@ -1001,8 +846,7 @@ p.valid  {
     content: "";
     width: 5px;
     margin-left: -12px;
-    margin-bottom: -16px; 
-     
+    margin-bottom: -16px;  
 }
 
 
@@ -1010,7 +854,6 @@ p.valid  {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     margin-bottom: 20px;
 }
 
@@ -1029,17 +872,9 @@ p.valid  {
 
 
 
-
-
-
-
-
-
-
 /***************CLIENT*************/
 .client {
-    padding: 40px 0;
-    
+    padding: 40px 0; 
 }
 
 .client__items {
@@ -1056,12 +891,10 @@ p.valid  {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center; 
 }
 .client__item img {
     width: 220px;
-    
 }
 .client__item__info {
     padding: 15px;
@@ -1078,9 +911,7 @@ p.valid  {
     background: #F9F9F9;
     padding: 40px 0;
 }
-/* .profi ._title{
-    margin-bottom: 60px;
-} */
+
 .profi__items {
     display: flex;
     justify-content: space-around;
@@ -1092,7 +923,6 @@ p.valid  {
     width: 315px;
     height: 452px;
     text-align: center;
-       
 }
 .profi__item img {
     margin-bottom: 18px;
@@ -1116,7 +946,7 @@ p.valid  {
     padding: 50px 0;
 }
 
-/* Вынести все title items отдельно? */
+
 ._title {
     max-width: 660px;
     text-align: center;
@@ -1149,18 +979,12 @@ p.valid  {
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     padding: 20px 16px;
-    cursor: pointer;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    
-       
+    cursor: pointer;   
 }
 .mistake__item h5 {
     margin-bottom: 12px;
 }
 .number {
-    
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -1168,23 +992,16 @@ p.valid  {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
-     background: url("../img/Vector\ 11.png") top 13px right 0  no-repeat #FFDC29;
+    background: url("../img/Vector\ 11.png") top 13px right 0  no-repeat #FFDC29;
 }
 
 
-/* .vector {
-    top: 50%;
-    position: absolute;
-    left: 20px;
-    z-index: 99;
-} */
+
 .mistake__item:hover {
     background-color: #FFCC29;;
 }
 .mistake__item:hover .number {
     background: url("../img/Vector12.png") top 14px right -3px  no-repeat #39373A;
-    /* background-color: #292722; */
 }
 
 
@@ -1206,7 +1023,6 @@ p.valid  {
 .blog__item {
    max-width: 350px;
     height: 550px;
-    /* background: #F9F9F9; */
     border-radius: 10px;
     padding: 16px 30px;
     display: flex;
@@ -1218,33 +1034,18 @@ p.valid  {
     overflow: hidden;
 }
 .blog_but {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     text-transform: uppercase;
     background: #FFCC29;
     border-radius: 28px;
-    /* width: 179px;
-    height: 50px; */
     padding: 15px;
     font-weight: 600;
-   
-    /* display: block;
-     text-align: center; */
 }
 /*************https://www.whitelabeldevelopers.ru/articles/20-udivitelnyix-animirovannyix-knopok-na-chistom-css */
 /* Рассмотреть вариант 3 */
 
 .btn:link,
 .btn:visited {
-    /* text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px; */
     transition: all .2s;
-    /* position: absolute; */
-
 }
 
 .btn:hover {
@@ -1257,10 +1058,6 @@ p.valid  {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* .btn-white {
-    background-color: #fff;
-    color: #777;
-} */
 
 .btn::after {
     content: "";
@@ -1308,7 +1105,7 @@ p.valid  {
     line-height:32px;
     font-weight: 700;
     transition: all .3s ease-out 0s;
-}   /* Разобраться с transition */
+}  
 
 .shadowBlog:hover {
     color: #FFCC29;
@@ -1331,8 +1128,7 @@ p.valid  {
     font-weight: 700;
 }
 .blog__item:hover .run {
-   transform: translateX(0px);
-   
+   transform: translateX(0px); 
 }
 
 
@@ -1341,8 +1137,6 @@ p.valid  {
 /*******************FOOTER*****************/
 .footer {
     padding: 30px 0 ;
-    /* margin: 0 auto; */
-    
 }
 .footer__main {
     display: flex;
@@ -1356,9 +1150,6 @@ p.valid  {
     display: inline-block;
     width: 31px;
     height: 31px;
-    /* background-repeat: no-repeat; */
-    /* background: #ffcc28; */
-    /* background-position: center; */
     border-radius: 50%;
 }
 .ico_fb {
@@ -1407,7 +1198,6 @@ details p {
     height: 3px;
     content: "";
     width: 49px;
-    /* margin: 0 auto; */
     margin-top: 7px; 
 }
 .social_links a:not(:last-child) {
@@ -1419,8 +1209,6 @@ details p:not(:last-child) {
 .footer__nav li:not(:last-child) {
     margin-bottom: 15px;
 }
-
-
 
 
 .footer__contacts {
@@ -1467,6 +1255,11 @@ details[open] {
     position: fixed;
 }
   
+
+
+
+
+
 
 /*ССЫЛКИ
  https://vertex-academy.com/tutorials/ru/ssylki/ */
