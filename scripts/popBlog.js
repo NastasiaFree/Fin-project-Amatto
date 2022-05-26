@@ -4,8 +4,7 @@ const butTelPop = document.getElementById('but_tel_pop');
 
 butTelPop.addEventListener('click', function(e){
     e.preventDefault();
-    popUpFin.classList.add('act')
-
+    popUpFin.classList.add('act');
     // console.log('final')
 })
 closePopUpFin.addEventListener('click', ()=>{
@@ -32,7 +31,6 @@ function validation() {
 let phone = [];
 const addPhone = function() {
     let telep = document.getElementById('telep').value;
-
     phone.push(telep);
     localStorage.setItem('phone', JSON.stringify(phone))
 }

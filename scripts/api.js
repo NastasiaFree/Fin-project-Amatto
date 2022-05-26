@@ -12,4 +12,30 @@ fetch("https://fakestoreapi.com/users?limit=3")
   });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 // https://codesandbox.io/s/ecstatic-mountain-u25tr?file=/src/index.js:0-401
