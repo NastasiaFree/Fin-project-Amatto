@@ -38,7 +38,6 @@ let footerText = `
                 <a href="https://www.linkedin.com/in/amatto-bucatarii-ab067b238/"><span class="ico ico_linked"></span></a>
                 <a href="https://www.instagram.com/amatto.bucatarii/"><span class="ico ico_inst" ></span></a>
                 <a href="https://www.youtube.com/channel/UCjPaS-HuKtbBTkPZUybXbBA"><span class="ico ico_yout" ></span></a>
-                <!-- <a href=""><span ico ico_fb></span></a> -->
             </div>
         </div>
     </div>
@@ -142,7 +141,7 @@ function setPop() {
     pop.innerHTML = popUpForm ;
     site.insertAdjacentElement('afterbegin', pop );
   }
-  setPop();
+setPop();
 
 
 
