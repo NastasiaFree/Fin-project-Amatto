@@ -27,7 +27,7 @@
                         <ul class="menu__list">
                             <li><a class="menu__link" href="">Главная</a></li>
                             <li><a class="menu__link" href="#about">О нас</a></li>
-                            <li><a class="menu__link" href="catalog.html">Каталог</a></li>
+                            <li><a class="menu__link" href="catalog.html" target="_blanc">Каталог</a></li>
                             <li><a class="menu__link" href="#payment">Рассрочка</a></li>
                             <li><a class="menu__link" href="blog.html"  target="_blanc">Блог</a></li>
                             <li><a class="menu__link" href="#footer">Контакты</a></li>
@@ -54,8 +54,6 @@
                 <div class="designed">
                     <a href="#" id="open_pop_up" class="pop_but">Бесплатная Консультация Дизайнера</a>
                 </div>
-                <!-- <button class="promo_but">Бесплатная Консультация Дизайнера</button>  нужна ли ссылка а?? -->
-                <!-- рассмотреть другие иконки -->
             </div>
 
             <div class="pop_up" id="pop_up">
@@ -118,19 +116,17 @@
                 <div class="_title">
                     <h3>Закажи <span>Кухню</span> </h3>
                 </div>
-                <p>До 31 марта</p>
+                <p>До <i id="date"></i> марта</p>
                 <h4>Получи</h4>
                 <h6>Посудомоечную машину</h6>
                 <h3>В подарок</h3>
                 <div class="order__time">
-                    
-                        <div class="timer__items">
-                          <div class="timer__item timer__days">00</div>
-                          <div class="timer__item timer__hours">00</div>
-                          <div class="timer__item timer__minutes">00</div>
-                          <div class="timer__item timer__seconds">00</div>
-                        </div>
-                      
+                    <div class="timer__items">
+                        <div id="day" class="timer__item timer__days">00</div>
+                        <div id="hour" class="timer__item timer__hours">00</div>
+                        <div id="minute" class="timer__item timer__minutes">00</div>
+                        <div id="second" class="timer__item timer__seconds">00</div>
+                    </div>   
                 </div>
             </div>
         </div>
@@ -143,38 +139,29 @@
             <div class="make__cards">
 
                 <div class="card make__item">
-                  <div class="front kitchen1">
-                        <h4 class="make_name">D 1</h4>
-                        <div class="make__price">
-                            <h4> <span>354</span> $/месяц </h4>
-                            <p>без первоначального взноса - 12 месяцев</p>
-                        </div>
+                    <div class="front kitchen1">
+                            <h4 class="make_name">D 1</h4>
+                            <div class="make__price">
+                                <h4> <span>354</span> $/месяц </h4>
+                                <p>без первоначального взноса - 12 месяцев</p>
+                            </div>
                     </div>
-                  <div class="back">
-                        <h5>Стильная и комфортная кухня!</h5>
-                        <p>Фасады - <i>Egger</i> </p>
-                        <p>Столешница - <i>Egger</i> </p>
-                        <p>Фурнитура - <i>Hettich</i> </p>
-                        <div class="back__price">
-                            <h5>Цена</h5>
-                            <p>8000 $</p>
-                        </div>
-                        <div class="back__price">
-                            <h5>Рассрочка <small>12 месяцев</small> </h5>
-                            <p>354 $</p>
-                        </div>
-                        
-                        <button class="back__cont">Оставить заявку</button>
-                        <!-- <div >
-                            <a href="#" id="open_pop_up" class="pop_but">Бесплатная Консультация Дизайнера</a>
-                        </div> -->
-                        <!-- <div >
-                            <a href="" class="back__cont" >Бесплатная Консультация Дизайнера</a>
-                        </div> -->
-                        <!-- <div class=" wer">
-                            <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                        </div> -->
-                  </div>
+                    <div class="back">
+                            <h5>Стильная и комфортная кухня!</h5>
+                            <p>Фасады - <i>Egger</i> </p>
+                            <p>Столешница - <i>Egger</i> </p>
+                            <p>Фурнитура - <i>Hettich</i> </p>
+                            <div class="back__price">
+                                <h5>Цена</h5>
+                                <p>8000 $</p>
+                            </div>
+                            <div class="back__price">
+                                <h5>Рассрочка <small>12 месяцев</small> </h5>
+                                <p>354 $</p>
+                            </div>
+                            
+                            <button class="back__cont">Оставить заявку</button>
+                    </div>
                 </div>
 
                 <div class="card make__item">
@@ -198,9 +185,6 @@
                               <p>254 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -225,9 +209,6 @@
                               <p>162 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -252,9 +233,6 @@
                               <p>310 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -279,9 +257,6 @@
                               <p>230 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -306,9 +281,6 @@
                               <p>185 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -333,9 +305,6 @@
                               <p>193 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -360,9 +329,6 @@
                               <p>310 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -387,9 +353,6 @@
                               <p>205 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -414,9 +377,6 @@
                               <p>193 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -441,9 +401,6 @@
                               <p>310 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
 
@@ -468,16 +425,12 @@
                               <p>205 $</p>
                           </div>
                           <button class="back__cont">Оставить заявку</button>
-                          <!-- <div class=" wer">
-                              <a href="https://itchief.ru/javascript/slider" target="_blank">Прочитать</a>
-                          </div> -->
                     </div>
                 </div>
                
             </div>
 
-
-            <button class="make__but"> <a href="catalog.html">Раскрыть ещё</a> </button>
+            <button > <a class="make__but" href="catalog.html" target="_blanc">Раскрыть ещё</a> </button>
 
         </div>
 
@@ -518,9 +471,7 @@
                 <div >
                     <a href="#" id="open_pop_up2" class="pop_but">Заказать кухню</a>
                 </div>
-            <!-- <button class="discont__but">Заказать кухню</button>  -->
             </div>
-            
         </div>
 
         <div class="caseVideo _container">
@@ -532,7 +483,6 @@
                 <iframe width="400" height="264" src="https://www.youtube.com/embed/eT5XqOpvmbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe width="400" height="264" src="https://www.youtube.com/embed/OWhBfOLJzVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe width="400" height="264" src="https://www.youtube.com/embed/1wdj-u8pQO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
             </div>
         </div>
 
@@ -549,7 +499,6 @@
                     <button id="but_tel_pop" class="advice__but butLocal pop_fin" >Записаться</button>
                     <p id="valid"></p>
                 </div>
-                
             </div>
         </div>
 
@@ -558,7 +507,6 @@
             <div class="_title">
                 <h3 id="about">Миссия Amatto</h3>
             </div>
-            
             <h6>Мы стремимся создать идеальное пространство в котором человеку будет комфортно находиться, отдыхать, готовить и весело проводить время со своими друзьями и близкими.</h6>
             <iframe width="900" height="700" src="https://www.youtube.com/embed/_oCC1G9DEew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -611,13 +559,9 @@
                     <button id="but_pay_pop" class="payment_but pop_fin">Отправить Заявку На Рассрочку</button>
                 </div>
                 <div class="payment__img">
-                    <!-- <img src="img/payment.png" alt=""> -->
                 </div>
             </div>
         </div>
-
-
-
 
 
         <div class="client _container">
@@ -704,7 +648,6 @@
                 <div class="mistake__item _itemScale">
                     
                     <div class="number">
-                        <!-- <img src="img/number1.png" alt=""> -->
                         <img  src="img/Vector 1.png" alt="">
                     </div>
                     <h5>Сделаю проект сам или мне разработали на бумажке</h5>
@@ -713,7 +656,6 @@
                 <div class="mistake__item _itemScale">
                     <div class="number">
                         <img src="img/Vector 2.png" alt="">
-                        <!-- <img src="img/Vector 11.png" alt=""> -->
                     </div>
                     <h5>Нет договора и описания, что входит в стоимость</h5>
                     <p>Фурнитура низкого качества, нет гарантии качества, при браке нет с кого спросить, получаете не то, за что платили</p>
@@ -748,8 +690,6 @@
                     <input type="tel" name="phone" placeholder="Ваш Телефон" 
                     >
                     <button id="but_tel_pop2" class="advice__but butLocal2 pop_fin">Записаться</button>
-                    <!-- <input type="tel" name="phone" placeholder="Ваш Телефон">
-                    <button id="but_tel_pop2" class="advice__but" >Записаться</button> -->
                     <p class="valid"></p>
                 </div>
             </div>
@@ -806,7 +746,6 @@
                             <a href="https://www.linkedin.com/in/amatto-bucatarii-ab067b238/"><span class="ico ico_linked"></span></a>
                             <a href="https://www.instagram.com/amatto.bucatarii/"><span class="ico ico_inst" ></span></a>
                             <a href="https://www.youtube.com/channel/UCjPaS-HuKtbBTkPZUybXbBA"><span class="ico ico_yout" ></span></a>
-                            <!-- <a href=""><span ico ico_fb></span></a> -->
                         </div>
                     </div>
                 </div>
@@ -816,7 +755,7 @@
                         <ul class="menu-list footer__nav">
                             <li><a class="" href="#">Главная</a></li>
                             <li><a href="#about">О нас</a></li>
-                            <li><a href="">Каталог</a></li>
+                            <li><a href="catalog.html" target="_blanc">Каталог</a></li>
                             <li><a href="#payment">Рассрочка</a></li>
                             <li><a href="blog.html" target="_blanc">Блог</a></li>
                             <li><a href="">Контакты</a></li>
@@ -851,16 +790,15 @@
             </div>  
         </footer>
         
-        <!-- <a href="mailto:contacts@vertex-academy.com">Свяжитесь с нами</a>
-        ссылка на почту-->
-        
     </div>
+
+
     <script src="script.js"></script>
     <script src="scripts/popUp.js"></script>
     <script src="scripts/payment.js"></script>
     <script src="scripts/api.js"></script>
     <script src="scripts/validate.js"></script>
     <script src="scripts/advice.js"></script>
-    <!-- <script src="header.js"></script> -->
+    <script src="scripts/timer.js"></script>
 </body>
 </html>
