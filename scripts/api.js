@@ -1,7 +1,6 @@
 const userName = document.querySelectorAll('.profi__item>h6');
-// console.log(userName);
 
-const names=[];
+let names=[];
 fetch("https://fakestoreapi.com/users?limit=3")
   .then((res) => res.json())
   .then((json) => {
@@ -9,15 +8,11 @@ fetch("https://fakestoreapi.com/users?limit=3")
         names.push(user.name.firstname);   
     }
     userName.forEach((elem, i)=>elem.innerHTML+=names[i])
+    localStorage.setItem('man', JSON.stringify(names))
   });
 
-
-
-
-
-
-
-
+manName = JSON.parse(localStorage.getItem('man'));
+userName.forEach((elem, i)=>elem.innerHTML+=manName[i])
 
 
 

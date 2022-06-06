@@ -1,4 +1,4 @@
-let countDate = new Date('May 31, 2022 00:00:00');
+let countDate = new Date('June 30, 2022 00:00:00');
 let order = countDate.getDate();
 console.log(order);
 let orderDate = document.getElementById('date');
